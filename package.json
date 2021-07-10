@@ -1,0 +1,10 @@
+{
+  "name": "repo-template",
+  "version": "1.0.0",
+  "description": "A template for bootstrapping a repo",
+  "main": "index.js",
+  "repository": "https://github.com/DanMad/repo-template",
+  "author": "DanMad",
+  "license": "MIT",
+  "private": false
+}
