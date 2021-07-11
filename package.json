@@ -2,9 +2,20 @@
   "name": "repo-template",
   "version": "1.0.0",
   "description": "A template for bootstrapping a repo",
-  "main": "index.js",
-  "repository": "https://github.com/DanMad/repo-template",
-  "author": "DanMad",
+  "homepage": "https://github.com/DanMad/repo-template#readme",
+  "bugs": "https://github.com/DanMad/repo-template/issues",
+  "repository": "https://github.com/DanMad/repo-template.git",
   "license": "MIT",
-  "private": false
+  "author": "DanMad",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && webpack --env production",
+    "start": "webpack serve --env development"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "sort-package-json": "^1.50.0"
+  }
 }
