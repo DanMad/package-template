@@ -9,6 +9,7 @@
   "author": "DanMad",
   "main": "dist/index.js",
   "scripts": {
+    "bootstrap": "yarn install && husky install && chmod +x .husky/*",
     "build": "rm -rf dist && webpack --env production",
     "start": "webpack serve --env development"
   },
