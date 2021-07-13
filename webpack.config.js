@@ -53,7 +53,7 @@ module.exports = (env) => {
     return {
       ...commonConfig,
       devServer: {
-        contentBase: path.join(__dirname, './dist/'),
+        contentBase: path.join(__dirname, './dist'),
         port: 3000,
       },
       mode: 'development',
