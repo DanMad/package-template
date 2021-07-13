@@ -35,7 +35,7 @@ const commonConfig = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: 'body',
-      template: path.join(__dirname, 'src/index.html'),
+      template: path.join(__dirname, './src/index.html'),
     }),
   ],
   resolve: {
@@ -53,7 +53,7 @@ module.exports = (env) => {
     return {
       ...commonConfig,
       devServer: {
-        contentBase: path.join(__dirname, 'dist/'),
+        contentBase: path.join(__dirname, './dist/'),
         port: 3000,
       },
       mode: 'development',
@@ -68,7 +68,7 @@ module.exports = (env) => {
     mode: 'production',
     output: {
       filename: 'app.js',
-      publicPath: 'https://danmad.github.io/repo-template/',
+      publicPath: '.',
     },
   };
 };
