@@ -11,6 +11,13 @@ dist/
 # Ignore files
 .*ignore
 
+# Image files
+*.gif
+*.ico
+*.jpg
+*.jpeg
+*.png
+
 # License
 LICENSE
 
