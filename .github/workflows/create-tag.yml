@@ -1,9 +1,10 @@
+name: Create Git Tag
+
 on:
   push:
     branches:
       - main
 
-name: Create Tag
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
@@ -19,7 +20,7 @@ jobs:
         with:
           git_tag_prefix: v
   push_tag:
-    name: Create Tag
+    name: Create Git Tag
     needs: check_version
     runs-on: ubuntu-latest
     steps:

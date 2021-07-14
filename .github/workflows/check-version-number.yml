@@ -1,12 +1,13 @@
+name: Check Version Number
+
 on:
   pull_request:
     branches:
       - main
 
-name: Check Version
 jobs:
   check_version:
-    name: Check Version
+    name: Check Version Number
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
