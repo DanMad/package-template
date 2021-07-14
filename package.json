@@ -5,7 +5,10 @@
   "description": "A template for bootstrapping a repo",
   "homepage": "https://github.com/DanMad/repo-template#readme",
   "bugs": "https://github.com/DanMad/repo-template/issues",
-  "repository": "https://github.com/DanMad/repo-template.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanMad/repo-template.git"
+  },
   "license": "MIT",
   "author": "DanMad",
   "main": "dist/index.js",
