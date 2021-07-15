@@ -1,4 +1,4 @@
-name: Check Version Number
+name: Pull Request (main)
 
 on:
   pull_request:
@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  check_version:
-    name: Check Version Number
+  check_package_version:
+    name: Check Package Version
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
