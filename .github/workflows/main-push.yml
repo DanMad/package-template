@@ -1,15 +1,16 @@
-name: Create Git Tag
+name: Push (main)
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 on:
   push:
     branches:
       - main
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
-  check_version:
-    name: Check Version
+  get_package_version:
+    name: Get Package Version
     runs-on: ubuntu-latest
     outputs:
       git_tag_name: ${{ steps.tag_check.outputs.git_tag_name }}
@@ -19,13 +20,13 @@ jobs:
         id: tag_check
         with:
           git_tag_prefix: v
-  push_tag:
-    name: Create Git Tag
-    needs: check_version
+  add_git_tag:
+    name: Add Git Tag
+    needs: get_package_version
     runs-on: ubuntu-latest
     steps:
-      - name: Push Tag to GitHub
+      - name: Push Git Tag
         run: |
           curl -s -H "Authorization: token ${GITHUB_TOKEN}" \
-          -d "{\"ref\": \"refs/tags/${{needs.check_version.outputs.git_tag_name}}\", \"sha\": \"${GITHUB_SHA}\"}" \
+          -d "{\"ref\": \"refs/tags/${{needs.get_package_version.outputs.git_tag_name}}\", \"sha\": \"${GITHUB_SHA}\"}" \
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/git/refs"
