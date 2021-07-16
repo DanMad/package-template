@@ -31,10 +31,16 @@ jobs:
           -H "Content-Type:application/json" \
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases" \
           -d "{ \
-            \"body\": \"Release version ${{needs.get_package_version.outputs.git_tag_name}}\", \
-            \"draft\": false, \
-            \"name\": \"${{needs.get_package_version.outputs.git_tag_name}}\", \
-            \"prerelease\": false \
             \"tag_name\": \"${{needs.get_package_version.outputs.git_tag_name}}\", \
             \"target_commitish\": \"${GITHUB_SHA}\", \
+            \"name\": \"${{needs.get_package_version.outputs.git_tag_name}}\", \
+            \"body\": \"Release version ${{needs.get_package_version.outputs.git_tag_name}}\", \
+            \"draft\": false, \
+            \"prerelease\": false \
           }"
+  testing:
+    name: Quick Test
+    needs: create_github_release
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world!"
