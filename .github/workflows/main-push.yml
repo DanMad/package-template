@@ -21,12 +21,12 @@ jobs:
         with:
           git_tag_prefix: v
   add_git_tag:
-    name: Add Git Tag
+    name: Add GitHub Release
     needs: get_package_version
     runs-on: ubuntu-latest
     steps:
-      - name: Push Git Tag
+      - name: Push Release
         run: |
           curl -s -H "Authorization: token ${GITHUB_TOKEN}" \
-          -d "{\"ref\": \"refs/tags/${{needs.get_package_version.outputs.git_tag_name}}\", \"sha\": \"${GITHUB_SHA}\"}" \
+          -d "{\"tag_name\": \"v${{needs.get_package_version.outputs.git_tag_name}}\", \"target_commitish\": \"${GITHUB_SHA}\", \"name\": \"v${{needs.get_package_version.outputs.git_tag_name}}\", \"body\": \"Release v${{needs.get_package_version.outputs.git_tag_name}}\", \"draft\": false, \"prerelease\": false }" \
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/git/refs"
