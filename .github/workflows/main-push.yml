@@ -20,13 +20,12 @@ jobs:
         id: tag_check
         with:
           git_tag_prefix: v
-  add_git_tag:
-    name: Add GitHub Release
+  create_github_release:
+    name: Create GitHub Release
     needs: get_package_version
     runs-on: ubuntu-latest
     steps:
-      - name: Push Release
-        run: |
+      - run: |
           curl -v -s \
           -H "Authorization: token ${GITHUB_TOKEN}" \
           -H "Content-Type:application/json" \
