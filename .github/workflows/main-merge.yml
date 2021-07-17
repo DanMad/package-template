@@ -1,4 +1,4 @@
-name: Merge (main)
+name: Merge Pull Request
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -16,6 +16,8 @@ jobs:
       git_tag_name: ${{ steps.tag_check.outputs.git_tag_name }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: dudo/tag_check@v1.0.0
         id: tag_check
         with:
@@ -25,7 +27,10 @@ jobs:
     needs: get_package_version
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          chmod +x ../scripts/*
-          ../scripts/create-github-release.sh
-        shell: bash
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 'lts/fermium'
+      - run: .github/scripts/create-github-release.sh
