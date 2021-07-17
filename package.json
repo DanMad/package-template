@@ -1,6 +1,6 @@
 {
   "name": "repo-template",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "private": true,
   "description": "A template for bootstrapping a repo",
   "homepage": "https://github.com/DanMad/repo-template#readme",
@@ -15,6 +15,7 @@
   "scripts": {
     "bootstrap": "yarn install && husky install && chmod +x .husky/*",
     "build": "rm -rf dist && webpack",
+    "format": "sort-package-json && prettier --write \"**/*\"",
     "start": "webpack serve --env development"
   },
   "dependencies": {
