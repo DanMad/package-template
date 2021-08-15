@@ -1,5 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
 
 const commonConfig = {
   entry: './src/index',
@@ -48,7 +48,7 @@ const commonConfig = {
   },
 };
 
-module.exports = (env) => {
+export default (env) => {
   if (env.development) {
     return {
       ...commonConfig,
