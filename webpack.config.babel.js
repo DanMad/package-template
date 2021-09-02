@@ -1,8 +1,9 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import path from 'path';
 
 const commonConfig = {
-  entry: './src/index',
+  entry: './src/js/app.jsx',
   module: {
     rules: [
       {
@@ -33,9 +34,12 @@ const commonConfig = {
     ],
   },
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: path.join(__dirname, './src/public'), to: '.' }],
+    }),
     new HtmlWebpackPlugin({
       inject: 'body',
-      template: path.join(__dirname, './src/index.html'),
+      template: path.join(__dirname, './src/html/index.html'),
     }),
   ],
   resolve: {
@@ -48,17 +52,17 @@ const commonConfig = {
   },
 };
 
-export default (env) => {
+const webpackConfig = (env) => {
   if (env.development) {
     return {
       ...commonConfig,
       devServer: {
-        contentBase: path.join(__dirname, './dist'),
         port: 3000,
+        static: path.join(__dirname, './dist'),
       },
       mode: 'development',
       output: {
-        filename: 'app.js',
+        filename: 'js/app.js',
       },
     };
   }
@@ -67,8 +71,10 @@ export default (env) => {
     ...commonConfig,
     mode: 'production',
     output: {
-      filename: 'app.js',
+      filename: 'js/app.js',
       publicPath: '.',
     },
   };
 };
+
+export { webpackConfig as default };
