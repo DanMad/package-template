@@ -1,8 +1,24 @@
 # Repo Template
 
-## Intstallation
+## Prerequisites
 
-To install this repo, clone it on your local machine and run `yarn bootstrap` from its root directory.
+To work with this repo you will need to install [Yarn](https://yarnpkg.com/getting-started/install) on your local machine.
+
+## Getting started
+
+To get started, clone this repo on your local machine and run the following command from its root directory:
+
+```
+$ yarn bootstrap
+```
+
+## Building
+
+To build this repo, run the following command from its root directory:
+
+```
+$ yarn build
+```
 
 ## Issues
 
