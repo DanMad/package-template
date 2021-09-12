@@ -35,7 +35,7 @@ const commonConfig = {
   },
   plugins: [
     new CopyWebpackPlugin({
-      patterns: [{ from: path.join(__dirname, './src/public'), to: '.' }],
+      patterns: [{ from: path.join(__dirname, './src/static'), to: '.' }],
     }),
     new HtmlWebpackPlugin({
       inject: 'body',
@@ -58,7 +58,7 @@ const webpackConfig = (env) => {
       ...commonConfig,
       devServer: {
         port: 3000,
-        static: path.join(__dirname, './dist'),
+        static: ['src/static'],
       },
       mode: 'development',
       output: {
