@@ -1,5 +1,5 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import HtmlPlugin from 'html-webpack-plugin';
 import path from 'path';
 
 const commonConfig = {
@@ -29,15 +29,23 @@ const commonConfig = {
       {
         exclude: /node_modules/,
         test: /\.s[ac]ss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          {
+            loader: 'style-loader',
+            options: { injectType: 'singletonStyleTag' },
+          },
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
     ],
   },
   plugins: [
-    new CopyWebpackPlugin({
+    new CopyPlugin({
       patterns: [{ from: path.join(__dirname, './src/static'), to: '.' }],
     }),
-    new HtmlWebpackPlugin({
+    new HtmlPlugin({
       inject: 'body',
       template: path.join(__dirname, './src/html/index.html'),
     }),
