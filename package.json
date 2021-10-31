@@ -23,12 +23,12 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.12.10",
-    "@babel/register": "^7.15.3",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/register": "^7.16.0",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^9.0.1",
@@ -43,7 +43,7 @@
     "sass-loader": "^12.3.0",
     "sort-package-json": "^1.52.0",
     "style-loader": "^3.3.1",
-    "webpack": "^5.60.0",
+    "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"
   }
