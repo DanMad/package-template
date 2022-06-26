@@ -51,11 +51,6 @@ const commonConfig = {
     }),
   ],
   resolve: {
-    alias: {
-      'react/jsx-runtime': require.resolve('./node_modules/react/jsx-runtime'),
-      react: require.resolve('./node_modules/react'),
-      'react-dom': require.resolve('./node_modules/react-dom'),
-    },
     extensions: ['.js', '.jsx'],
   },
 };
