@@ -28,7 +28,7 @@ const commonConfig = {
       },
       {
         exclude: /node_modules/,
-        test: /\.s[ac]ss$/,
+        test: /\.s?css$/,
         use: [
           {
             loader: 'style-loader',

@@ -1,21 +1,18 @@
 {
-  "name": "repo-template",
+  "name": "@danmad/package-name",
   "version": "1.0.0",
-  "private": true,
-  "description": "A template for bootstrapping a repo",
-  "homepage": "https://github.com/DanMad/repo-template#readme",
-  "bugs": "https://github.com/DanMad/repo-template/issues",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DanMad/repo-template.git"
-  },
-  "license": "MIT",
-  "author": "DanMad",
+  "description": "A handy package template",
+  "homepage": "https://github.com/danmad/package-name#readme",
+  "bugs": "https://github.com/danmad/package-name/issues",
+  "repository": "https://github.com/danmad/package-name.git",
+  "license": "UNLICENSED",
+  "author": "Daniel Maddison <hooky.mounted_0n@icloud.com>",
   "scripts": {
-    "bootstrap": "rm -rf node_modules && yarn install && husky install && chmod +x .husky/*",
-    "build": "rm -rf dist && webpack",
-    "format": "sort-package-json && prettier --write \"**/*\"",
-    "start": "webpack serve --env development"
+    "bootstrap": "yarn install --frozen-lockfile && husky install && chmod +x .husky/*",
+    "build": "rm -rf dist/* && webpack",
+    "nuke": "rm -rf node_modules && rm -f yarn.lock",
+    "ship": "cd dist && yarn publish --access public",
+    "tidy": "sort-package-json && prettier --write '**/*'"
   },
   "dependencies": {
     "on-the-case": "^2.1.0",
