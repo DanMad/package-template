@@ -14,7 +14,7 @@
     "connect": "cd dist && yarn link",
     "disconnect": "cd dist && yarn unlink",
     "nuke": "rm -rf node_modules && rm -f yarn.lock",
-    "ship": "cd dist && yarn publish",
+    "ship": "cd dist && yarn publish --access public",
     "tidy": "sort-package-json && prettier --write '**/*'"
   },
   "devDependencies": {
