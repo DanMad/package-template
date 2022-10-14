@@ -31,6 +31,6 @@ jobs:
     - uses: actions/setup-node@v2
     - run: |
         npm install --global yarn
-        yarn bootstrap
+        yarn bootstrap:ci
         yarn build
         yarn ship

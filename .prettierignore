@@ -5,6 +5,8 @@
 *.jpeg
 *.png
 *.svg
+*.woff
+*.woff2
 
 # Dependencies
 node_modules/
