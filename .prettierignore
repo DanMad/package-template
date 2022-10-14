@@ -1,22 +1,22 @@
+# Asset files
+*.gif
+*.ico
+*.jpg
+*.jpeg
+*.png
+*.svg
+*.woff
+*.woff2
+
 # Dependencies
 node_modules/
 
 # Distribution directory
 dist/
 
-# Hidden directories
-.*/**
+# Hidden directories and files
+.*
 !.github/workflows/**
-
-# Ignore files
-.*ignore
-
-# Image files
-*.gif
-*.ico
-*.jpg
-*.jpeg
-*.png
 
 # License
 LICENSE
@@ -25,11 +25,7 @@ LICENSE
 *.log
 
 # Operating System
-.DS_Store
 Thumbs.db
 
 # Package files
 yarn.lock
-
-# Run Command files
-.*rc
