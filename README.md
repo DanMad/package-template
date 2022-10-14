@@ -14,8 +14,8 @@ To build this repo, run `yarn build` from its root directory.
 
 ## Issues
 
-If you encounter any bugs, please [post an issue](https://github.com/danmad/package-name/issues/new).
+If you encounter any bugs, please [post an issue](https://github.com/danmad/package-template/issues/new).
 
 ## Contributing
 
-Contributions are more than welcome. Ensure you read through the [contributing guidelines](https://github.com/danmad/repo-template/blob/main/CONTRIBUTING.md) before submitting a pull request.
+Contributions are more than welcome. Ensure you read through the [contributing guidelines](https://github.com/danmad/package-template/blob/main/CONTRIBUTING.md) before submitting a pull request.
