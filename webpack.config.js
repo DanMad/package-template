@@ -38,7 +38,6 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        path.join(__dirname, '.npmrc'),
         path.join(__dirname, 'LICENSE'),
         path.join(__dirname, 'package.json'),
         path.join(__dirname, 'README.md'),
