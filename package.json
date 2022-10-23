@@ -1,6 +1,6 @@
 {
   "name": "@danmad/package-template",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A handy package template",
   "homepage": "https://github.com/danmad/package-template#readme",
   "bugs": "https://github.com/danmad/package-template/issues",
