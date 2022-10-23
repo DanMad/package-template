@@ -6,7 +6,7 @@ To work with this repo you will need to install [Yarn](https://yarnpkg.com/getti
 
 ## Getting started
 
-To get started, clone this repo on your machine and run `yarn bootstrap` from its root directory.
+To get started, clone this repo on your machine and run `yarn install` from its root directory.
 
 ## Building
 
