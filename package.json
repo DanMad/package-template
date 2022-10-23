@@ -8,14 +8,9 @@
   "license": "MIT",
   "author": "DanMad <hooky.mounted_0n@icloud.com>",
   "scripts": {
-    "bootstrap": "yarn install && husky install && chmod +x .husky/*",
-    "bootstrap-ci": "yarn install --frozen-lockfile && husky install && chmod +x .husky/*",
-    "build": "rm -rf dist/* && webpack",
-    "connect": "cd dist && yarn link",
-    "disconnect": "cd dist && yarn unlink",
-    "nuke": "rm -rf node_modules && rm -f yarn.lock",
-    "ship": "cd dist && yarn publish --access public",
-    "tidy": "sort-package-json && prettier --write '**/*'"
+    "build": "webpack",
+    "postinstall": "husky install && chmod +x .husky/*",
+    "uninstall": "rm -rf dist node_modules yarn.lock yarn-error.log"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",

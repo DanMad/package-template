@@ -31,6 +31,7 @@ module.exports = {
     ],
   },
   output: {
+    clean: true,
     filename: 'index.js',
     libraryTarget: 'umd',
     path: path.join(__dirname, 'dist'),
