@@ -1,19 +1,20 @@
 {
-  "name": "@danmad/package-template",
-  "version": "1.0.1",
-  "description": "A handy package template",
-  "homepage": "https://github.com/danmad/package-template#readme",
-  "bugs": "https://github.com/danmad/package-template/issues",
-  "repository": "https://github.com/danmad/package-template.git",
+  "name": "@danmad/repo-template",
+  "version": "1.0.0",
+  "description": "A template for bootstrapping a repo",
+  "homepage": "https://github.com/danmad/repo-template#readme",
+  "bugs": "https://github.com/danmad/repo-template/issues",
+  "repository": "https://github.com/danmad/repo-template.git",
   "license": "MIT",
   "author": "DanMad <hooky.mounted_0n@icloud.com>",
   "scripts": {
+    "bootstrap": "yarn install",
+    "postbootstrap": "husky install && chmod +x .husky/*",
     "build": "webpack",
-    "postinstall": "husky install && chmod +x .husky/*",
-    "uninstall": "rm -rf dist node_modules yarn.lock yarn-error.log"
+    "unstrap": "rm -rf dist node_modules yarn-error.log"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.5",
+    "@babel/core": "^7.19.6",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
