@@ -1,10 +1,10 @@
 {
-  "name": "@danmad/package-template",
+  "name": "@danmad/repo-template",
   "version": "1.0.0",
-  "description": "A handy package template",
-  "homepage": "https://github.com/danmad/package-template#readme",
-  "bugs": "https://github.com/danmad/package-template/issues",
-  "repository": "https://github.com/danmad/package-template.git",
+  "description": "A template for bootstrapping a repo",
+  "homepage": "https://github.com/danmad/repo-template#readme",
+  "bugs": "https://github.com/danmad/repo-template/issues",
+  "repository": "https://github.com/danmad/repo-template.git",
   "license": "MIT",
   "author": "DanMad <hooky.mounted_0n@icloud.com>",
   "scripts": {
