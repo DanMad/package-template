@@ -31,6 +31,6 @@ jobs:
     - uses: actions/setup-node@v3
     - run: |
         npm install --global yarn
-        yarn install --frozen-lockfile
+        yarn bootstrap --frozen-lockfile
         yarn build
         yarn publish dist --access public

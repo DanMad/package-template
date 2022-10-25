@@ -8,9 +8,10 @@
   "license": "MIT",
   "author": "DanMad <hooky.mounted_0n@icloud.com>",
   "scripts": {
+    "bootstrap": "yarn install",
+    "postbootstrap": "husky install && chmod +x .husky/*",
     "build": "webpack",
-    "postinstall": "husky install && chmod +x .husky/*",
-    "uninstall": "rm -rf dist node_modules yarn-error.log"
+    "unstrap": "rm -rf dist node_modules yarn-error.log"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
