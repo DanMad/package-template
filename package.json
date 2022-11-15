@@ -1,10 +1,10 @@
 {
   "name": "@your-scope/your-package",
   "version": "1.0.0",
-  "description": "Your package description",
-  "homepage": "https://github.com/your-username/your-package#readme",
-  "bugs": "https://github.com/your-username/your-package/issues",
-  "repository": "https://github.com/your-username/your-package.git",
+  "description": "Your repo description",
+  "homepage": "https://github.com/your-username/your-repo#readme",
+  "bugs": "https://github.com/your-username/your-repo/issues",
+  "repository": "https://github.com/your-username/your-repo.git",
   "license": "MIT",
   "author": "Your name <your-email>",
   "scripts": {
