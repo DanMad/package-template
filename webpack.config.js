@@ -15,25 +15,14 @@ module.exports = {
           },
         ],
       },
-      {
-        exclude: /node_modules/,
-        test: /\.s?css$/,
-        use: [
-          {
-            loader: 'style-loader',
-            options: { injectType: 'singletonStyleTag' },
-          },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
-        ],
-      },
     ],
   },
   output: {
     clean: true,
     filename: 'index.js',
-    libraryTarget: 'umd',
+    library: {
+      type: 'commonjs2',
+    },
     path: path.join(__dirname, 'dist'),
   },
   plugins: [
@@ -52,6 +41,6 @@ module.exports = {
     alias: {
       '~': path.join(__dirname, 'node_modules'),
     },
-    extensions: ['.js', '.scss', '.css'],
+    extensions: ['.js'],
   },
 };
