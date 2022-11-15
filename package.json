@@ -1,12 +1,12 @@
 {
-  "name": "@danmad/repo-template",
+  "name": "@your-scope/your-package",
   "version": "1.0.0",
-  "description": "A template for bootstrapping a repo",
-  "homepage": "https://github.com/danmad/repo-template#readme",
-  "bugs": "https://github.com/danmad/repo-template/issues",
-  "repository": "https://github.com/danmad/repo-template.git",
+  "description": "Your package description",
+  "homepage": "https://github.com/your-username/your-package#readme",
+  "bugs": "https://github.com/your-username/your-package/issues",
+  "repository": "https://github.com/your-username/your-package.git",
   "license": "MIT",
-  "author": "DanMad <hooky.mounted_0n@icloud.com>",
+  "author": "Your name <your-email>",
   "scripts": {
     "bootstrap": "yarn install",
     "postbootstrap": "husky install && chmod +x .husky/*",
