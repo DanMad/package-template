@@ -38,12 +38,6 @@ module.exports = {
     }),
   ],
   resolve: {
-    // Explicitly aliases the tilde character to the package's
-    // `node_modules` directory. This ensures SCSS `@import` statements
-    // don't throw errors when referencing locally linked packages.
-    alias: {
-      '~': path.join(__dirname, 'node_modules'),
-    },
     extensions: ['.js'],
   },
 };
