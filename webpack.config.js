@@ -12,20 +12,10 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
           },
-        ],
-      },
-      {
-        exclude: /node_modules/,
-        test: /\.s?css$/,
-        use: [
-          {
-            loader: 'style-loader',
-            options: { injectType: 'singletonStyleTag' },
-          },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
         ],
       },
     ],
@@ -33,7 +23,9 @@ module.exports = {
   output: {
     clean: true,
     filename: 'index.js',
-    libraryTarget: 'umd',
+    library: {
+      type: 'commonjs2',
+    },
     path: path.join(__dirname, 'dist'),
   },
   plugins: [
@@ -46,12 +38,6 @@ module.exports = {
     }),
   ],
   resolve: {
-    // Explicitly aliases the tilde character to the package's
-    // `node_modules` directory. This ensures SCSS `@import` statements
-    // don't throw errors when referencing locally linked packages.
-    alias: {
-      '~': path.join(__dirname, 'node_modules'),
-    },
-    extensions: ['.js', '.scss', '.css'],
+    extensions: ['.js'],
   },
 };

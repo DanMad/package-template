@@ -1,3 +1,3 @@
-const greeting = 'Hello, World!';
+let greeting = 'Hello, World!';
 
 export { greeting as default };
