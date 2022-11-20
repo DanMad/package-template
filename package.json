@@ -2,7 +2,7 @@
   "name": "@your-scope/your-package",
   "version": "1.0.0",
   "description": "Your repo description",
-  "homepage": "https://github.com/your-username/your-repo#readme",
+  "homepage": "https://www.npmjs.com/package/@your-scope/your-package",
   "bugs": "https://github.com/your-username/your-repo/issues",
   "repository": "https://github.com/your-username/your-repo.git",
   "license": "MIT",
