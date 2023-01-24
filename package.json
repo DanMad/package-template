@@ -1,10 +1,10 @@
 {
   "name": "@your-scope/your-package",
   "version": "1.0.0",
-  "description": "Your repo description",
+  "description": "Your project description",
   "homepage": "https://www.npmjs.com/package/@your-scope/your-package",
-  "bugs": "https://github.com/your-username/your-repo/issues",
-  "repository": "https://github.com/your-username/your-repo.git",
+  "bugs": "https://github.com/your-username/your-project/issues",
+  "repository": "https://github.com/your-username/your-project.git",
   "license": "MIT",
   "author": "Your name <your-email>",
   "scripts": {
@@ -14,14 +14,14 @@
     "unstrap": "rm -rf dist node_modules yarn-error.log"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.7",
+    "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^9.1.0",
+    "babel-loader": "^9.1.2",
     "copy-webpack-plugin": "^11.0.0",
-    "husky": "^8.0.2",
+    "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.1",
-    "sort-package-json": "^2.1.0",
+    "prettier": "^2.8.3",
+    "sort-package-json": "^2.2.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }
