@@ -28,8 +28,8 @@ yarn bootstrap
 
 ### Build
 
-The `build` script will build a production bundle of the `src/` directory to the
-`dist/` directory.
+The `build` script will build a production bundle of the repo template's `src/`
+directory to its `dist/` directory.
 
 ```sh
 yarn build

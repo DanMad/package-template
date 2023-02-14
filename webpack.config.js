@@ -38,7 +38,8 @@ module.exports = {
     }),
   ],
   resolve: {
-    modules: ['node_modules'],
     extensions: ['.js'],
+    modules: ['node_modules'],
+    preferRelative: true,
   },
 };
