@@ -1,7 +1,7 @@
-# Build files
+# Bundle
 dist
 
-# Log files
+# Logs
 *.log
 
 # Operating System

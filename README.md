@@ -2,29 +2,54 @@
 
 ## Prerequisites
 
-To work with this template you will need to install
-[Yarn](https://yarnpkg.com/getting-started/install) on your machine.
+This repo template requires that you have [Node.js](https://nodejs.org/en/)
+and [Yarn](https://yarnpkg.com/getting-started/install) installed on your
+machine.
 
-## Installing
+## Getting Started
 
-To install this template, clone it on your machine and run `yarn bootstrap` from
-its root directory.
+To use this repo template, clone it in an appropriate directory on your machine.
 
-## Building
+```sh
+git clone https://github.com/danmad/repo-template.git
+```
 
-To build this template, run `yarn build` from its root directory.
+## Scripts
 
-## Uninstalling
+The following scripts can be run from the root directory of this repo template.
 
-To uninstall this template, run `yarn unstrap` from its root directory.
+### Bootstrap
+
+The `bootstrap` script will bootstrap this repo template on your machine.
+
+```sh
+yarn bootstrap
+```
+
+### Build
+
+The `build` script will build a production bundle of the repo template's `src/`
+directory to its `dist/` directory.
+
+```sh
+yarn build
+```
+
+### Unstrap
+
+The `unstrap` script will unstrap this repo template on your machine.
+
+```sh
+yarn unstrap
+```
 
 ## Issues
 
 If you encounter any bugs, please
-[post an issue](https://github.com/your-username/your-project/issues/new).
+[post an issue](https://github.com/danmad/repo-template/issues/new).
 
 ## Contributing
 
 Contributions are more than welcome. Ensure you read through the
-[contributing guidelines](https://github.com/your-username/your-project/blob/main/CONTRIBUTING.md)
+[contributing guidelines](https://github.com/danmad/repo-template/blob/main/CONTRIBUTING.md)
 before submitting a pull request.

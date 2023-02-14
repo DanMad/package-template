@@ -1,3 +1,3 @@
-let greeting = 'Hello, World!';
+let greet = ({ name }) => `Hello, ${name ? name : 'Stranger'}!`;
 
-export { greeting as default };
+export { greet as default };
