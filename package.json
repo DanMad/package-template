@@ -1,12 +1,19 @@
 {
-  "name": "@your-scope/your-package",
+  "name": "@danmad/repo-template",
   "version": "1.0.0",
-  "description": "Your project description",
-  "homepage": "https://www.npmjs.com/package/@your-scope/your-package",
-  "bugs": "https://github.com/your-username/your-project/issues",
-  "repository": "https://github.com/your-username/your-project.git",
+  "description": "A repo template for new projects",
+  "homepage": "https://github.com/danmad/repo-template#readme",
+  "bugs": "https://github.com/danmad/repo-template/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danmad/repo-template.git"
+  },
   "license": "MIT",
-  "author": "Your name <your-email>",
+  "author": {
+    "name": "Daniel Maddison",
+    "email": "hello@danielmaddison.io",
+    "url": "https://www.danielmaddison.io"
+  },
   "scripts": {
     "bootstrap": "yarn install",
     "postbootstrap": "husky install && chmod +x .husky/*",
@@ -19,9 +26,9 @@
     "babel-loader": "^9.1.2",
     "copy-webpack-plugin": "^11.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3",
-    "sort-package-json": "^2.2.0",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "sort-package-json": "^2.4.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }
