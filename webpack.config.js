@@ -1,8 +1,7 @@
 const CopyPlugin = require('copy-webpack-plugin');
-const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src'),
+  entry: 'src',
   mode: 'production',
   module: {
     rules: [
@@ -26,15 +25,10 @@ module.exports = {
     library: {
       type: 'umd',
     },
-    path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new CopyPlugin({
-      patterns: [
-        path.resolve(__dirname, 'LICENSE'),
-        path.resolve(__dirname, 'package.json'),
-        path.resolve(__dirname, 'README.md'),
-      ],
+      patterns: ['LICENSE', 'package.json', 'README.md'],
     }),
   ],
   resolve: {
