@@ -1,5 +1,13 @@
 # Repo Template
 
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Scripts](#scripts)
+- [Issues](#issues)
+- [Contributing](#contributing)
+
 ## Prerequisites
 
 This repo template requires that you have [Node.js](https://nodejs.org/en/)
@@ -28,8 +36,8 @@ yarn bootstrap
 
 ### Build
 
-The `build` script will build a production bundle of the repo template's `src/`
-directory to its `dist/` directory.
+The `build` script will build a production bundle of the repo template's `src`
+directory to its `dist` directory.
 
 ```sh
 yarn build
@@ -37,7 +45,7 @@ yarn build
 
 ### Unstrap
 
-The `unstrap` script will unstrap this repo template on your machine.
+The `unstrap` script will unstrap this repo template from your machine.
 
 ```sh
 yarn unstrap
